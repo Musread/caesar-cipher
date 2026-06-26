@@ -83,10 +83,13 @@ body {
   outline: none;
   text-align: center;
   background-color: #fffaf3;
-  transition: all 0.6s ease;
+  transition: background-color 0.6s ease;
 }
 .secret-word__error {
-  border-color: #e05454;
+  border: 3px solid #e05454;
+}
+.secret-word__success {
+  border: 3px solid #a5cf83;
 }
 .secret-word:hover {
   background-color: #f2eee7;

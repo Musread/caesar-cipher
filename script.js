@@ -29,15 +29,19 @@ const nextLevel = function () {
 };
 
 const displayButtonNext = function () {
+  secretWord.classList.add("secret-word__success");
   buttonNext.style.display = "inline-block";
 };
 
 const errorAnimation = function () {
   secretWord.classList.remove("animate__animated", "animate__shakeX");
   secretWord.classList.add("animate__animated", "animate__shakeX");
+  secretWord.classList.remove("secret-word__error");
+  secretWord.classList.add("secret-word__error");
 };
 
 const undisplayButtonNext = function () {
+  secretWord.classList.remove("secret-word__success");
   buttonNext.style.display = "none";
 };
 
@@ -148,6 +152,9 @@ buttonNext.addEventListener("click", function () {
   undisplayButtonNext();
 });
 
+secretWord.addEventListener("click", function () {
+  secretWord.classList.remove("secret-word__error");
+});
 // $$$$$$$$$$$$$$$$$$$$$$$$$
 
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ THE GAME $$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -158,7 +165,6 @@ level = localStorage.getItem("level")
   ? parseInt(localStorage.getItem("level"))
   : 0;
 saveLevel();
-console.log(words);
 cryptedWord.textContent = encryption(words[level].word, words[level].key);
 keyNumber.textContent = words[level].key;
 score.textContent = `${level + 1} / ${words.length}`;
