@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fff2db;
+  --primary-color: #8eb486;
+  --secondary-color: #ffffff;
+
+  // TEXT
+  --text-color-1: #2c2c2c;
+  --text-color-2: #e76f2e;
+  --text-color-3: #f6f4e8;
+
+  // BUTTON COLORS
+  --button-warning: #ffae6e;
+  --button-warning-dark: #e69d63;
+  --button-success: #a5cf83;
+  --button-success-dark: #95ba76;
+
+  // WHEEL SIZES
+
+  --outer-wheel-size: 55rem;
+  --inner-wheel-size: 44rem;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 400;
+  color: var(--text-color-1);
+}
+
+body {
+  background-color: var(--bg-color);
+}

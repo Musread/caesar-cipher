@@ -1,0 +1,86 @@
+.caesarWheel {
+  // position: relative;
+  display: flex;
+  font-family: "Roboto Mono", serif;
+
+  &__outer,
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  &__outer {
+    width: var(--outer-wheel-size);
+    height: var(--outer-wheel-size);
+    background-color: var(--primary-color);
+    overflow: hidden;
+  }
+
+  &__inner {
+    width: var(--inner-wheel-size);
+    height: var(--inner-wheel-size);
+    background-color: var(--secondary-color);
+    transition: transform 0.5s ease;
+  }
+
+  &__letter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 1rem 0;
+
+    &--outside {
+      transform-origin: 0 calc(var(--outer-wheel-size) / 2);
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        top: 0;
+        border: 1px solid black;
+        transform-origin: 0 calc(var(--outer-wheel-size) / 2);
+        transform: rotate(-5deg);
+      }
+    }
+
+    &--inside {
+      transform-origin: 0 calc(var(--inner-wheel-size) / 2);
+    }
+
+    &--outside:first-child,
+    &--inside:first-child {
+      color: var(--text-color-2);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 3rem;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__button {
+    font-size: inherit;
+    border: 1px solid var(--button-warning);
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 2px;
+  }
+
+  &__key {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    color: var(--text-color-2);
+  }
+}

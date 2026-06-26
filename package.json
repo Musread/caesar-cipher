@@ -1,0 +1,15 @@
+{
+  "name": "cesar-code",
+  "version": "1.0.0",
+  "description": "A little game by Jules Ceasar himself",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npm-sass ./sass/main.scss > app.css"
+  },
+  "author": "Musread",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-sass": "^3.1.0"
+  }
+}

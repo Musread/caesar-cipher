@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 3rem 4rem;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  transition: all 0.6s ease;
+  //   color: var(--text-color-3);
+
+  &__validate {
+    background-color: var(--button-warning);
+
+    &:hover {
+      background-color: var(--button-warning-dark);
+    }
+  }
+
+  &__next {
+    margin-top: 3rem;
+    background-color: var(--button-success);
+    display: none;
+
+    &:hover {
+      background-color: var(--button-success-dark);
+    }
+  }
+}
